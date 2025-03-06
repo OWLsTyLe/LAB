@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочна структурв 5</title>
+    <style>
+        * {
+            margin: 0;
+
+        }
+        body, html {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .yellow1 {
+            height: 100px;
+            background-color: #ffcc00;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .start {
+            width: 200px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+        }
+
+        .blue2 {
+            background-color: #007BFF;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid black;
+            width: 100px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            flex: 1;
+        }
+
+        .red6 {
+            height: 10%;
+            background-color: red;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid black;
+        }
+
+        .middle {
+            display: flex;
+            flex: 1;
+            margin-top: 10px;
+        }
+
+        .center {
+            flex:1;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blue4 {
+            width: 10%;
+            background-color: #007BFF;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid black;
+        }
+
+        .yellow5 {
+            height: 10%;
+            background-color: #ffcc00;
+            text-align: center;
+            line-height: 50px;
+            border-top: 1px solid black;
+        }
+
+        .red6:hover,
+        .center:hover,
+        .yellow5:hover,
+        .yellow1:hover,
+        .blue2:hover,
+        .blue4:hover {
+          transform: scale(1.02);
+          transition: transform 0.2s ease;
+        }
+
+        .red6,
+        .yellow5,
+        .blue2,
+        .blue4,
+        .yellow1,
+        .center {
+          border: 2px solid black;
+          box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="yellow1">
+        <div class="start"></div>
+        <div>1</div>
+    </div>
+
+    <div class="content">
+        <div class="blue2">2</div>
+        <div class="content-wrapper">
+            <div class="red6">6</div>
+            <div class="middle">
+                <div class="center">
+                  <ul>
+                    Коли вітер в полі виє
+І дощі шумлять над краєм,
+Я стою, дивлюсь у небо,
+Щось у серці відчуваю.
+
+«Що, сумуєш?» – запитають,
+Але я не признаюся.
+Я була колись спокійна,
+А тепер уже боюся.
+
+Бо слова, що раз сказані,
+Розлетяться, наче листя.
+І вже їх не повернути,
+Не спинити, не почистить.
+
+Тож мовчу, вдивляюсь в хмари,
+Хай несуть вони тривогу,
+Бо коли душа втомилась –
+Не шукає вже підмогу.</li>
+                  </ul>
+                </div>
+                <div class="blue4">4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="yellow5">5</div>
+</div>
+
+</body>
+</html>

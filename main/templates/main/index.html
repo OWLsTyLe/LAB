@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блочна структура</title>
+  <style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  margin-right: 200px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  margin-right: 200px;
+}
+
+.left-block {
+  width: 8%;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
+.right-block {
+  background-color: #fff;
+  padding: 15px;
+  min-height: calc(100vh - 120px);
+  box-sizing: border-box;
+}
+
+.block:hover,
+.header:hover,
+.footer:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+.header,
+.footer,
+.left-block,
+.right-block {
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+</style>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+<div class="layout">
+  <header class="header">1</header>
+  <section class="content">
+    <div class="left-block block">2</div>
+    <div class="right-block block">
+      <h2>«Як дитиною, бувало…»</h2>
+      <ul>
+        <li>Коли вітер в полі виє
+        І дощі шумлять над краєм,
+        Я стою, дивлюсь у небо,
+        Щось у серці відчуваю.
+
+        «Що, сумуєш?» – запитають,
+        Але я не признаюся.
+        Я була колись спокійна,
+        А тепер уже боюся.
+
+        Бо слова, що раз сказані,
+        Розлетяться, наче листя.
+        І вже їх не повернути,
+        Не спинити, не почистить.
+
+        Тож мовчу, вдивляюсь в хмари,
+        Хай несуть вони тривогу,
+        Бо коли душа втомилась –
+        Не шукає вже підмогу.</li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">3</footer>
+</div>
+</body>

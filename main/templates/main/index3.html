@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочна структура 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .blue1, .blue3 {
+            height: 10vh;
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            display: flex;
+            height: 80vh;
+        }
+
+        .yellow2, .yellow5 {
+            width: 120px;
+            background-color: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center {
+            flex: 1;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center:hover,
+        .yellow5:hover,
+        .yellow2:hover,
+        .blue1:hover,
+        .blue3:hover {
+          transform: scale(1.02);
+          transition: transform 0.3s ease;
+        }
+
+        .yellow5,
+        .blue1,
+        .blue3,
+        .yellow2,
+        .center {
+          border: 2px solid black;
+          box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="blue1">1</div>
+
+<div class="content">
+    <div class="yellow2">2</div>
+    <div class="center">
+      <ul>
+        Коли вітер в полі виє
+І дощі шумлять над краєм,
+Я стою, дивлюсь у небо,
+Щось у серці відчуваю.
+
+«Що, сумуєш?» – запитають,
+Але я не признаюся.
+Я була колись спокійна,
+А тепер уже боюся.
+
+Бо слова, що раз сказані,
+Розлетяться, наче листя.
+І вже їх не повернути,
+Не спинити, не почистить.
+
+Тож мовчу, вдивляюсь в хмари,
+Хай несуть вони тривогу,
+Бо коли душа втомилась –
+Не шукає вже підмогу.</li>
+      </ul>
+    </div>
+    <div class="yellow5">5</div>
+</div>
+
+<div class="blue3">3</div>
+
+</body>
+</html>
