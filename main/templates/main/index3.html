@@ -3,106 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блочна структура 3</title>
+    <title>Морський бій</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            margin: 0;
         }
 
-        .blue1, .blue3 {
-            height: 10vh;
+        .board {
+            display: grid;
+            grid-template-columns: repeat(11, 70px);
+            grid-template-rows: repeat(11, 70px);
+        }
+        .cell {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #007BFF;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: red;
         }
-
-        .content {
-            display: flex;
-            height: 80vh;
+         .header {
+             font-weight: bold;
+             background-color: lightgray;
+         }
+         .ship {
+            background-color: #5e5e5e;
         }
-
-        .yellow2, .yellow5 {
-            width: 120px;
-            background-color: #ffcc00;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .center {
-            flex: 1;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .center:hover,
-        .yellow5:hover,
-        .yellow2:hover,
-        .blue1:hover,
-        .blue3:hover {
-          transform: scale(1.02);
-          transition: transform 0.3s ease;
-        }
-
-        .yellow5,
-        .blue1,
-        .blue3,
-        .yellow2,
-        .center {
-          border: 2px solid black;
-          box-sizing: border-box;
-        }
-
     </style>
 </head>
 <body>
+    <div class="board">
+        <div class="cell header"></div>
+        <div class="cell header">1</div>
+        <div class="cell header">2</div>
+        <div class="cell header">3</div>
+        <div class="cell header">4</div>
+        <div class="cell header">5</div>
+        <div class="cell header">6</div>
+        <div class="cell header">7</div>
+        <div class="cell header">8</div>
+        <div class="cell header">9</div>
+        <div class="cell header">10</div>
 
-<div class="blue1">1</div>
 
-<div class="content">
-    <div class="yellow2">2</div>
-    <div class="center">
-      <ul>
-        Коли вітер в полі виє
-І дощі шумлять над краєм,
-Я стою, дивлюсь у небо,
-Щось у серці відчуваю.
+        <div class="cell header">A</div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
 
-«Що, сумуєш?» – запитають,
-Але я не признаюся.
-Я була колись спокійна,
-А тепер уже боюся.
 
-Бо слова, що раз сказані,
-Розлетяться, наче листя.
-І вже їх не повернути,
-Не спинити, не почистить.
+        <div class="cell header">B</div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
 
-Тож мовчу, вдивляюсь в хмари,
-Хай несуть вони тривогу,
-Бо коли душа втомилась –
-Не шукає вже підмогу.</li>
-      </ul>
+        <div class="cell header">C</div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+
+        <div class="cell header">D</div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+
+        <div class="cell header">E</div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell header">F</div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+
+        <div class="cell header">G</div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+
+        <div class="cell header">H</div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+
+        <div class="cell header">I</div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell header">J</div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+        <div class="cell ship"></div>
+
+
     </div>
-    <div class="yellow5">5</div>
-</div>
-
-<div class="blue3">3</div>
-
 </body>
 </html>
