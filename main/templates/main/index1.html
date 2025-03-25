@@ -3,179 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блочна структурв 5</title>
+    <title>Меню</title>
     <style>
-        * {
+        body {
             margin: 0;
-
+            background-color: #1a1935;
+            font-family: Arial, sans-serif;
         }
-        body, html {
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #f9f9f9;
-          color: #007BFF;
-        }
-
-        .container {
-            height: 100%;
+        .navbar {
             display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .yellow1 {
-            height: 100px;
-            background-color: #ffcc00;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            background-color: #1a1935;
             padding: 10px;
-            border-bottom: 1px solid black;
         }
-
-        .start {
-            width: 200px;
-            height: 40px;
-            background-color: white;
-            border: 1px solid black;
+        .nav-item {
+            position: relative;
+            margin: 0 15px;
         }
-
-        .content {
-            display: flex;
-            flex: 1;
-        }
-
-        .blue2 {
-            background-color: #007BFF;
-            text-align: center;
+        .nav-item a {
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-right: 1px solid black;
-            width: 100px;
-        }
-
-        .content-wrapper {
-            display: flex;
-            flex-direction: column;
+            text-decoration: none;
             padding: 10px;
-            flex: 1;
+            display: inline-block;
+            font-weight: bold;
+            position: relative;
         }
-
-        .red6 {
-            height: 10%;
-            background-color: red;
-            text-align: center;
-            line-height: 50px;
-            border: 1px solid black;
+        .nav-item a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            height: 3px;
+            background-color: #ff4b5c;
+            width: 0;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
         }
-
-        .middle {
-            display: flex;
-            flex: 1;
-            margin-top: 10px;
+        .nav-item:hover a::after {
+            width: 100%;
+            left: 0;
         }
-
-        .center {
-            flex:1;
+        .inlyne {
+            border: 0.1px solid #bbbbbb;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
             background-color: white;
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 4px 6px rgba(7, 5, 5, 0.1);
+            min-width: 200px;
+            border-radius: 5px;
         }
-
-        .blue4 {
-            width: 10%;
-            background-color: #007BFF;
-            text-align: center;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-left: 1px solid black;
+        .dropdown-menu a {
+            color: black;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
         }
-
-        .yellow5 {
-            height: 10%;
-            background-color: #ffcc00;
-            text-align: center;
-            line-height: 50px;
-            border-top: 1px solid black;
+        .dropdown-menu a::after {
+            content: none;
         }
-
-        .red6:hover,
-        .center:hover,
-        .yellow5:hover,
-        .yellow1:hover,
-        .blue2:hover,
-        .blue4:hover {
-          transform: scale(1.02);
-          transition: transform 0.2s ease;
+        .nav-item:hover .dropdown-menu {
+            display: block;
         }
-
-        .red6,
-        .yellow5,
-        .blue2,
-        .blue4,
-        .yellow1,
-        .center {
-          border: 2px solid black;
-          box-sizing: border-box;
-        }
-
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="yellow1">
-        <div class="start"></div>
-        <div>1</div>
-    </div>
-
-    <div class="content">
-        <div class="blue2">2</div>
-        <div class="content-wrapper">
-            <div class="red6">6</div>
-            <div class="middle">
-                <div class="center">
-                  <ul>
-                    Коли вітер в полі виє
-І дощі шумлять над краєм,
-Я стою, дивлюсь у небо,
-Щось у серці відчуваю.
-
-«Що, сумуєш?» – запитають,
-Але я не признаюся.
-Я була колись спокійна,
-А тепер уже боюся.
-
-Бо слова, що раз сказані,
-Розлетяться, наче листя.
-І вже їх не повернути,
-Не спинити, не почистить.
-
-Тож мовчу, вдивляюсь в хмари,
-Хай несуть вони тривогу,
-Бо коли душа втомилась –
-Не шукає вже підмогу.</li>
-                  </ul>
-                </div>
-                <div class="blue4">4</div>
+    <nav class="navbar">
+        <div class="nav-item">
+            <a href="#">HOME</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">ABOUT</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">SHORT CODES ▾</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">PAGES ▾</a>
+            <div class="dropdown-menu">
+                <a href="#" class="inlyne">Custom Menu</a>
+                <a href="#" class="inlyne">Custom Menu</a>
+                <a href="#" class="inlyne">Sub Menu ▶</a>
+                <a href="#" class="inlyne">Custom Menu</a>
+                <a href="#" class="inlyne">Custom Menu</a>
             </div>
         </div>
-    </div>
-
-    <div class="yellow5">5</div>
-</div>
-
+        <div class="nav-item">
+            <a href="#">PORTFOLIO</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">MEGAMENU ▾</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">CONTACT</a>
+        </div>
+    </nav>
 </body>
 </html>
