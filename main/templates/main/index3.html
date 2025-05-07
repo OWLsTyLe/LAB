@@ -3,176 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Морський бій</title>
-    <!--морський бій-->
-    <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .board {
-            display: grid;
-            grid-template-columns: repeat(11, 70px);
-            grid-template-rows: repeat(11, 70px);
-        }
-        .cell {
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007BFF;
-            color: red;
-        }
-         .header {
-             font-weight: bold;
-             background-color: lightgray;
-         }
-         .ship {
-            background-color: #5e5e5e;
-        }
-    </style>
+    <title>Розділення рядка на пари</title>
 </head>
 <body>
-    <div class="board">
-        <div class="cell header"></div>
-        <div class="cell header">1</div>
-        <div class="cell header">2</div>
-        <div class="cell header">3</div>
-        <div class="cell header">4</div>
-        <div class="cell header">5</div>
-        <div class="cell header">6</div>
-        <div class="cell header">7</div>
-        <div class="cell header">8</div>
-        <div class="cell header">9</div>
-        <div class="cell header">10</div>
+    <h1>Розділення рядка на пари</h1>
+    <input type="text" id="inputString" placeholder="Введіть рядок">
+    <button onclick="displayResult()">Розділити на пари</button>
+    <div id="result"></div>
 
+    <script>
+        function splitString(inputStr) {
+            if (inputStr.length % 2 !== 0) {
+                inputStr += '_';
+            }
 
-        <div class="cell header">A</div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
+            const pairs = [];
+            for (let i = 0; i < inputStr.length; i += 2) {
+                pairs.push(inputStr.slice(i, i + 2));
+            }
+            let resultHtml = '<ul>';
+            pairs.forEach(pair => {
+                resultHtml += `<li>${pair}</li>`;
+            });
+            resultHtml += '</ul>';
 
+            return resultHtml;
+        }
 
-        <div class="cell header">B</div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-
-        <div class="cell header">C</div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-
-        <div class="cell header">D</div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-
-        <div class="cell header">E</div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-
-        <div class="cell header">F</div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-
-        <div class="cell header">G</div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-
-        <div class="cell header">H</div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-
-        <div class="cell header">I</div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-
-        <div class="cell header">J</div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-        <div class="cell ship"></div>
-
-
-    </div>
+        function displayResult() {
+            const inputString = document.getElementById('inputString').value;
+            const result = splitString(inputString);
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
 </body>
 </html>
