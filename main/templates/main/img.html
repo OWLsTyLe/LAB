@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Рухоме зображення</title>
+    <style>
+        body {
+            background-color: purple;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #myImage {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <img
+        id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbJg_aXD52UCYEZN95BeetGWnOd_n5bLuT7g&s" alt="Рухоме зображення">
+    <script>
+        const img = document.getElementById('myImage');
+
+        let posX = 0;
+        let posY = 0;
+        let speedX = 2;
+        let speedY = 2;
+        let isPaused = false;
+
+        const imgWidth = img.offsetWidth;
+        const imgHeight = img.offsetHeight;
+
+
+
+        function moveImage() {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            if (!isPaused) {
+                posX += speedX;
+                posY += speedY;
+
+                if ((posX + imgWidth >= windowWidth) || (posX <= 0)) {
+                    speedX = -speedX;
+                }
+
+                if ((posY + imgHeight >= windowHeight) || (posY <= 0)) {
+                    speedY = -speedY;
+                }
+
+                img.style.left = posX + 'px';
+                img.style.top = posY + 'px';
+
+                requestAnimationFrame(moveImage);
+            }
+        }
+            moveImage();
+
+
+        img.addEventListener('mouseover', function () {
+            isPaused = true;
+        });
+
+        img.addEventListener('mouseout', function () {
+            isPaused = false;
+            moveImage();
+        });
+
+
+
+    </script>
+
+</body>
+</html>
